@@ -1,7 +1,7 @@
 def merge_list(list1, list2):
 
-    if not isinstance(list1, int) or isinstance(list2, int):
-        return "Not a list of integet numbers"
+    if not isinstance(list1, list) and isinstance(list2, list):
+        raise TypeError
 
     list3 = list1 + list2
 
@@ -17,7 +17,7 @@ def merge_list(list1, list2):
         j = right
 
         while i < j:
-            while list[i] <= pivot:
+            while list[i] < pivot:
                 i+=1
             while list[j] > pivot:
                 j-=1
@@ -33,11 +33,3 @@ def merge_list(list1, list2):
 
     sortList(list3, 0, len(list3) - 1)
     return list3
-
-list1 = [1,5,3,7]
-list2 = []
-
-
-list4 = ['mars', 'lego']
-
-print(merge_list(list1, list4))
