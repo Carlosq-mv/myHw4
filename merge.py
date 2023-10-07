@@ -39,21 +39,3 @@ def merge_list(list1, list2):
     sortList(list3)
     return list3
     
-list1 = [1,5,52,83]
-list2 = [2,6,7,8]
-
-list3 = [-8,1,2,70,71]
-list4 = [-20,-19,68]
-
-list5 = [2]
-list6 = [1]
-
-list7 = [random.randint(1, 1000) for _ in range(500)]
-list8 = [random.randint(1, 1000) for _ in range(500)]
-
-listA = ['mars', 'lego']
-listB= ['sdf', 'sdf']
-
-list9= []
-result = merge_list(list7, list8)
-print(result)

@@ -1,9 +1,11 @@
 def my_steps(n:int):
-	try:
+	'''	try:
 		if n > 25 or n < 1:
-			raise ValueError
+			raise ValueError("ValueError")
 	except ValueError as error:
-		return error
+		return error'''
+	if n > 25 or n < 1:
+		raise ValueError
 
 	if n == 1 or n == 0:
 		return 1
@@ -13,6 +15,3 @@ def my_steps(n:int):
 		current = previous + current
 		previous = temp
 	return current
-
-
-print(my_steps(26))

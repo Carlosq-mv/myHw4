@@ -1,7 +1,7 @@
 def sort_dictionary(myDict):
 
     if len(myDict) == 0:
-        return
+        return []
     else:
         reverseSorted = dict(sorted(myDict.items(), reverse=True))
         list = []
@@ -9,8 +9,3 @@ def sort_dictionary(myDict):
             list.append((key, value[0]))
         return list
  
-    
-    
-myDict = {}
-
-print(sort_dictionary(myDict))
