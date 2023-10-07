@@ -1,5 +1,4 @@
 def my_steps(n:int):
-
 	if n > 25 or n < 1:
 		return ("Integer not in range")
 	else:
