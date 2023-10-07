@@ -1,35 +1,59 @@
+import random
 def merge_list(list1, list2):
 
-    if not isinstance(list1, list) and isinstance(list2, list):
-        raise TypeError
+    try:
+        for i, j in zip(list1, list2):
+            if not isinstance(i, int) or not isinstance(j, int):
+                raise TypeError("TypeError")
+    except TypeError as error:
+        return error
 
+    def sortList(list):
+        if len(list) > 1:
+            left = list[:len(list)//2]
+            right = list[len(list)//2:]
+            
+            sortList(left)
+            sortList(right)
+            
+            i,j, k = 0, 0, 0
+            while i < len(left) and j < len(right):
+                if left[i] < right[j]:
+                    list[k] = left[i]
+                    i += 1
+                else:
+                    list[k] = right[j]     
+                    j += 1      
+                k += 1
+            while i < len(left):
+                list[k] = left[i]
+                i += 1
+                k += 1
+                
+            while j < len(right):
+                list[k] = right[j]
+                j += 1
+                k += 1
+                
     list3 = list1 + list2
-
-    def sortList (list, left, right):
-        if left < right:
-            partition_pos = partition(list ,left, right)
-            sortList(list, left, partition_pos - 1)
-            sortList(list, partition_pos + 1, right)
-
-    def partition(list, left, right):
-        pivot = list[left]
-        i = left
-        j = right
-
-        while i < j:
-            while list[i] < pivot:
-                i+=1
-            while list[j] > pivot:
-                j-=1
-            if i < j:
-                temp = list[i]
-                list[i] = list[j]
-                list[j] = temp
-
-        temp = list[left]
-        list[left] = list[j]
-        list[j] = temp
-        return j
-
-    sortList(list3, 0, len(list3) - 1)
+    sortList(list3)
     return list3
+    
+list1 = [1,5,52,83]
+list2 = [2,6,7,8]
+
+list3 = [-8,1,2,70,71]
+list4 = [-20,-19,68]
+
+list5 = [2]
+list6 = [1]
+
+list7 = [random.randint(1, 1000) for _ in range(500)]
+list8 = [random.randint(1, 1000) for _ in range(500)]
+
+listA = ['mars', 'lego']
+listB= ['sdf', 'sdf']
+
+list9= []
+result = merge_list(list7, list8)
+print(result)
