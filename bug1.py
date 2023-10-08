@@ -4,8 +4,8 @@ class Base:
       self.y = y
       self.size = size
       
-    def shape(shape="circle"):
-      return f"This is a a {shape}"
+    def shape():
+      return f"This is a a circle"
     
 class Circle(Base):
   

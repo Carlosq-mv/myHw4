@@ -1,0 +1,4 @@
+If you have multiple classes that are reusing the same code(methods & class members), just create a parent(base) class to hold all that code,
+and the child classes will be able to use that code and expand upon it as needed.
+It makes it possible to share functionality between classes and make code more reusable. 
+It also helps to declutter all that repeating code and makes it easier to read.

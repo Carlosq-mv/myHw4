@@ -1,13 +1,17 @@
 import random
 def merge_list(list1, list2):
 
-    try:
+    '''try:
         for i, j in zip(list1, list2):
             if not isinstance(i, int) or not isinstance(j, int):
                 raise TypeError("TypeError")
     except TypeError as error:
-        return error
-
+        return error'''
+        
+    for i, j in zip(list1, list2):
+        if not isinstance(i, int) or not isinstance(j, int):
+            raise TypeError
+        
     def sortList(list):
         if len(list) > 1:
             left = list[:len(list)//2]
