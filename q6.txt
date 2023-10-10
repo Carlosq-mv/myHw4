@@ -1,0 +1,6 @@
+1.  The only change that is happening is within the increment_int_a function so after the function call in the main method,
+    a isn't incremented by 1.
+2.  The change does happen after the increment_int_b function is called. The value tied with the key 32 is incremented by 1.
+3.  The difference between these two is that dictionaries are mutable in python while integers are immutable. When passing in an
+    immutable type in a function it creates a copy of it within that function so any changes will only live within the scope of that function.
+    On the other hand, passing in a mutable type means you are working directly with it, so all changes made in the function are tied directly to that object.

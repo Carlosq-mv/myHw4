@@ -1,16 +1,5 @@
 def allcaps(func):
-    def caps():
+    def wrapper():
         string1 = str(func())
-        print(string1.upper())
-    return caps
-
-@allcaps
-def greet():
-    return "hello world!"
-
-def main():
-    greet();
-
-main()
-
-    
+        return string1.upper()
+    return wrapper

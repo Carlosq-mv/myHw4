@@ -1,10 +1,9 @@
-import random
 def merge_list(list1, list2):
 
-    '''try:
+    '''    try:
         for i, j in zip(list1, list2):
             if not isinstance(i, int) or not isinstance(j, int):
-                raise TypeError("TypeError")
+                raise TypeError("TypeError)
     except TypeError as error:
         return error'''
         
@@ -42,4 +41,10 @@ def merge_list(list1, list2):
     list3 = list1 + list2
     sortList(list3)
     return list3
-    
+
+listA = ['who', 'this']
+listB = ['e', 't']
+listC = [1,2,4,2]
+listD = [90, 0, 10]
+
+print(merge_list(listA, listB))
