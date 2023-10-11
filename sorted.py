@@ -1,4 +1,4 @@
-def reverse_sort_dictionaryy(myDict):
+def reverse_sort_dictionary(myDict):
 
     if len(myDict) == 0:
         return []

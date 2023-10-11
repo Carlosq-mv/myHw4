@@ -5,7 +5,7 @@ class Base:
       self.size = size
       
     def shape(self):
-      return f"This is a a circle"
+      return f"This is a circle"
     
 class Circle(Base):
   
