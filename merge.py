@@ -41,10 +41,3 @@ def merge_list(list1, list2):
     list3 = list1 + list2
     sortList(list3)
     return list3
-
-listA = ['who', 'this']
-listB = ['e', 't']
-listC = [1,2,4,2]
-listD = [90, 0, 10]
-
-print(merge_list(listA, listB))
